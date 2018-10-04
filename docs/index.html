@@ -1,0 +1,344 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Ways of Using Vue.js</title>
+    <link rel="icon"
+          href="./favicon.ico">
+    <link rel="stylesheet"
+          href="./css/bulmaswatch-lux.min.css">
+    <link rel="stylesheet"
+          href="./css/app.css">
+  </head>
+
+  <body>
+    <div class="section">
+      <div class="columns">
+        <div class="column is-2 side">
+          <aside class="menu">
+            <ul class="menu-list">
+              <li>
+                <a onclick="show('app')">A Vue script</a>
+              </li>
+              <li>
+                <a onclick="show('vue-is-just-js')">Vue is just JS</a>
+              </li>
+              <li>
+                <a onclick="show('poem')">Poem</a>
+              </li>
+              <li>
+                <a href="https://gwvt.github.io/thirteen-vue-spa/">Return to App</a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <div class="column is-10">
+          <div class="page-header">
+            <h3 class="title is-3">
+                Thirteen
+            </h3>
+            <h4 class="title is-4">
+              Incorporate into existing code
+            </h4>
+          </div>
+          <div id="app" class="main">
+            <div class="columns">
+              <div class="column is-6">
+                <div class="img-background">
+                  <div class="img-wrapper"
+                       v-bind:class="imgColor">
+                    <img src="./img/blackbird.png"
+                         alt="blackbird" />
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="button-wrapper"
+                     v-for="color in colors"
+                     v-bind:key="color.name">
+                  <a class="button"
+                     v-bind:class="`is-${color.name}`"
+                     v-on:click="changeColor(color.name)">
+                     {{ `${color.display} light` }}
+                  </a>
+                </div>
+              </div>
+              <div class="column is-3 has-text-centered">
+                <h5 class="title is-5">
+                  It was
+                </h5>
+                <a class="button"
+                   v-on:click="toggleFaded">
+                   {{ fadedButtonDisplay }}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="vue-is-just-js" class="main">
+            <video controls
+                   muted
+                   src="./video/vue-is-just-js.mp4"
+                   width="700">
+            </video>
+          </div>
+          <div id="poem" class="main">
+            <div class="columns">
+              <div class="column is-4 is-offset-4">
+                <h3 class="title is-3">
+                  Thirteen Ways of Looking at a Blackbird
+                </h3>
+                <h4 class="title is-4">
+                  Wallace Stevens
+                </h4>
+                <p>
+                  <strong>
+                    I
+                  </strong>
+                </p>
+                <p>
+                  Among twenty snowy mountains,
+                </p>
+                <p>
+                  The only moving thing
+                </p>
+                <p>
+                  Was the eye of the blackbird.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    II
+                  </strong>
+                </p>
+                <p>
+                  I was of three minds,
+                </p>
+                <p>
+                  Like a tree
+                </p>
+                <p>
+                  In which there are three blackbirds.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    III
+                  </strong>
+                </p>
+                <p>
+                  The blackbird whirled in the autumn winds.
+                </p>
+                <p>
+                  It was a small part of the pantomime.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    IV
+                  </strong>
+                </p>
+                <p>
+                  A man and a woman
+                </p>
+                <p>
+                  Are one.
+                </p>
+                <p>
+                  A man and a woman and a blackbird
+                </p>
+                <p>
+                  Are one.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    V
+                  </strong>
+                </p>
+                <p>
+                  I do not know which to prefer,
+                </p>
+                <p>
+                  The beauty of inflections
+                </p>
+                <p>
+                  Or the beauty of innuendoes,
+                </p>
+                <p>
+                  The blackbird whistling
+                </p>
+                <p>
+                  Or just after.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    VI
+                  </strong>
+                </p>
+                <p>
+                  Icicles filled the long window
+                </p>
+                <p>
+                  With barbaric glass.
+                </p>
+                <p>
+                  The shadow of the blackbird
+                </p>
+                <p>
+                  Crossed it, to and fro.
+                </p>
+                <p>
+                  The mood
+                </p>
+                <p>
+                  Traced in the shadow
+                </p>
+                <p>
+                  An indecipherable cause.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    VII
+                  </strong>
+                </p>
+                <p>
+                  O thin men of Haddam,
+                </p>
+                <p>
+                  Why do you imagine golden birds?</p>
+                <p>
+                  Do you not see how the blackbird
+                </p>
+                <p>
+                  Walks around the feet
+                </p>
+                <p>
+                  Of the women about you?</p>
+                <br />
+                <p>
+                  <strong>
+                    VIII
+                  </strong>
+                </p>
+                <p>
+                  I know noble accents
+                </p>
+                <p>
+                  And lucid, inescapable rhythms;</p>
+                <p>
+                  But I know, too,
+                </p>
+                <p>
+                  That the blackbird is involved
+                </p>
+                <p>
+                  In what I know.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    IX
+                  </strong>
+                </p>
+                <p>
+                  When the blackbird flew out of sight,
+                </p>
+                <p>
+                  It marked the edge
+                </p>
+                <p>
+                  Of one of many circles.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    X
+                  </strong>
+                </p>
+                <p>
+                  At the sight of blackbirds
+                </p>
+                <p>
+                  Flying in a green light,
+                </p>
+                <p>
+                  Even the bawds of euphony
+                </p>
+                <p>
+                  Would cry out sharply.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    XI
+                  </strong>
+                </p>
+                <p>
+                  He rode over Connecticut
+                </p>
+                <p>
+                  In a glass coach.
+                </p>
+                <p>
+                  Once, a fear pierced him,
+                </p>
+                <p>
+                  In that he mistook
+                </p>
+                <p>
+                  The shadow of his equipage
+                </p>
+                <p>
+                  For blackbirds.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    XII
+                  </strong>
+                </p>
+                <p>
+                  The river is moving.
+                </p>
+                <p>
+                  The blackbird must be flying.
+                </p>
+                <br />
+                <p>
+                  <strong>
+                    XIII
+                  </strong>
+                </p>
+                <p>
+                  It was evening all afternoon.
+                </p>
+                <p>
+                  It was snowing
+                </p>
+                <p>
+                  And it was going to snow.
+                </p>
+                <p>
+                  The blackbird sat
+                </p>
+                <p>
+                  In the cedar-limbs.
+                </p>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

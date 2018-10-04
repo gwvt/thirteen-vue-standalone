@@ -1,0 +1,51 @@
+strong {
+  margin-bottom: 2rem;
+}
+
+.side {
+  margin: 6rem 0 0 0;
+}
+
+.button {
+  width: 100%;
+}
+
+.page-header {
+  margin: 0 0 4rem 0;
+}
+
+.page-section {
+  padding-bottom: 2rem;
+}
+
+.sub-heading {
+  height: 4rem;
+}
+
+.vertical-repeating {
+  margin-top: 1rem;
+}
+
+.narrow {
+  width: 30%;
+}
+
+.button-wrapper {
+  margin: 0 0 0.5rem 0;
+}
+
+.button {
+  border-radius: 10px;
+}
+
+.img-background {
+  background-color: gray;
+}
+
+.img-wrapper {
+  padding: 0.7rem;
+}
+
+.faded {
+  opacity: 0.4;
+}
