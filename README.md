@@ -1,9 +1,9 @@
 # thirteen-vue-standalone
 ## a presentation app
-This static web site complements the presentation [thirteen-vue-spa](https://gitlab.com/gwvt/thirteen-vue-spa), showing how one can use Vue as a drop-in script with existing HTML and no build tools.
+This static web site complements the presentation [thirteen-vue-spa](https://github.com/gwvt/thirteen-vue-spa), showing how one can use Vue as a drop-in script with existing HTML and no build tools.
 
 ## to view the app online
-See it [here](https://gwvt.gitlab.io/thirteen-vue-standalone/). Vue devtools and warnings are turned on for production so you can kick the tires.
+See it [here](https://gwvt.github.io/thirteen-vue-standalone/). Vue devtools and warnings are turned on for production so you can kick the tires.
 
 ## to run locally
 Clone the repo, then
