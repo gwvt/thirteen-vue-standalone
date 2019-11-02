@@ -45,7 +45,7 @@
               Incorporate into existing code
             </h4>
           </div>
-          <div id="app" class="main">
+          <div id="app" class="main"> <!-- ∆1-->
             <div class="columns">
               <div class="column is-6">
                 <div class="img-background">
@@ -74,14 +74,14 @@
                 <div class="button-wrapper">
                   <a class="button"
                      v-on:click="toggleFaded"
-                     :disabled="!fadedIsActive">
+                     :disabled="!faded">
                      Afternoon
                   </a>
                 </div>
                 <div class="button-wrapper">
                   <a class="button"
                      v-on:click="toggleFaded"
-                     :disabled="fadedIsActive">
+                     :disabled="faded">
                      Evening
                   </a>
                 </div>

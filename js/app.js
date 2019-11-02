@@ -3,7 +3,7 @@
 Vue.config.productionTip = true;
 Vue.config.devtools = true;
 
-new Vue({
+new Vue({ // ∆1
   el: '#app',
   data: {
     colors: [
@@ -25,18 +25,15 @@ new Vue({
       },
     ],
     activeColorName: 'success',
-    fadedIsActive: false,
+    faded: false,
   },
   computed: {
     imgColor() {
       const classes = {
-        faded: this.fadedIsActive,
+        faded: this.faded,
       };
       classes[`has-background-${this.activeColorName}`] = true;
       return classes;
-    },
-    fadedButtonDisplay() {
-      return this.fadedIsActive ? 'Evening' : 'Afternoon';
     },
   },
   methods: {
@@ -44,7 +41,7 @@ new Vue({
       this.activeColorName = name;
     },
     toggleFaded() {
-      this.fadedIsActive = !this.fadedIsActive;
+      this.faded = !this.faded;
     },
   },
 });
